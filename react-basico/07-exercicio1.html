@@ -38,6 +38,53 @@
 				a idade que a pessoa terá ao final do ano, calculada por meio de
 				um cálculo simples (2025 menos o ano de nascimento informado).
     */
+       // Passo 2: Declaração da função de componente que recebe as props
+    function DadosPessoais({ nome, sobrenome, dia, mes, ano }) {
+      
+      // Passo 6 (cálculo): Calcula a idade que a pessoa terá no final de 2025
+      const idadeFinal = 2025 - ano;
+
+      return (
+        // Passo 3: Utilização de um Fragment (<> ... </>)
+        <>
+          {/* Passo 3 e 4: Primeiro parágrafo com a primeira cor e o nome completo */}
+          <p className="cor-azul">
+            Nome Completo: {nome} {sobrenome}
+          </p>
+
+          {/* Passo 3 e 5: Segundo parágrafo com a segunda cor e a data de nascimento */}
+          <p className="cor-verde">
+            Data de Nascimento: {dia}/{mes}/{ano}
+          </p>
+
+          {/* Passo 6 (exibição): Div que mostra a idade calculada */}
+          <div>
+            Idade ao final de 2025: {idadeFinal} anos.
+          </div>
+        </>
+      );
+    }
+
+    // Seleciona o elemento root do HTML
+    const container = document.getElementById('root');
+
+    // Cria a raiz da aplicação React
+    const root = ReactDOM.createRoot(container);
+
+    // Renderiza o componente 'DadosPessoais' na raiz, passando os valores para as props
+    root.render(
+      <DadosPessoais 
+        nome="Maria" 
+        sobrenome="Silva" 
+        dia={20} 
+        mes={10} 
+        ano={1995} 
+      />
+    );
+    
+  </script>
+</body>
+</html>
 		
   </script>
   
