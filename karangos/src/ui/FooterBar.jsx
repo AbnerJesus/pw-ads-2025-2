@@ -25,7 +25,7 @@ export default function FooterBar() {
          }
        }}
      >
-        Desenvolvido e mantido com <CoffeeIcon fontSize='small'/><a href="mailto:Kinai.top@hotmail.com">Abner Eduardo Silva Jesus</a>
+        Desenvolvido e mantido com <CoffeeIcon fontSize='small' /> por <a href="mailto:abnerjesus20@hotmail.com" style={{ color: 'red' }}>Abner Eduardo Silva Jesus</a> | <span style={{ color: 'red' }}>abnerjesus20@hotmail.com</span>
         </Typography>
    </Box>
  </>
